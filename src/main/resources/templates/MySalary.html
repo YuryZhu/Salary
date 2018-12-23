@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Salary manager</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"
+          href="../../css/main.css"/>
+    <script src="../static/js/main.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Workday</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">My Salary</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="starter-template">
+        <h2>
+            <span th:text="'Add your name, lastname and salary'"></span><br/>
+            <span th:text="'You have put the following: ' + ${salary_param} "></span>
+        </h2>
+        <div>
+            <table class="table">
+                <tbody>
+                <tr style="height: 36px;">
+                    <td style="height: 36px; width: 449px;">
+                        <table class="table-responsive">
+                            <tbody>
+                            <tr>
+                                <td style="width: 24.833%;">
+                                    <label>Name</label>
+                                </td>
+                                <td style="width: 75.167%;">
+                                    <div style="padding: 10px">
+                                        <input class="input-sm" id="Name"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Last Name</label>
+                                </td>
+                                <td>
+                                    <div style="padding: 10px">
+                                        <input class="input-sm" id="LastName"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Salary</label>
+                                </td>
+                                <td>
+                                    <div style="padding: 10px">
+                                        <input class="input-sm" id="Salary"/>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>Here, will be shown the table with salary</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <button id="btnHello">Save</button>
+    </div>
+</div>
+
+<!-- /.container -->
+
+<script type="text/javascript"
+        src="webjars/jquery/3.2.1/jquery.js"/>
+
+<script type="text/javascript"
+        src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript"
+        src="../../js/main.js"></script>
+
+</body>
+</html>
